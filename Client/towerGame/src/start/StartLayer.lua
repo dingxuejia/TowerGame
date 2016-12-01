@@ -5,7 +5,7 @@ end)
 
 function StartLayer:ctor()
 	-- body
-	local spr = display.newSprite("HelloWorld.png", display.cx, display.cy):addTo(self)
+	local spr = display.newSprite("HelloWorld.png", display.cx, display.cy + 200):addTo(self)
 end
 
 return StartLayer
