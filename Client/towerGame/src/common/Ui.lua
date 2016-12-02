@@ -62,7 +62,7 @@ function ui.newButton(params)
     local titlePosRateY = params.titlePosRateY or 0.5
     local buttonSize = button:getContentSize()
 
-    button:getExtendNode2():setPosition(buttonSize.width/2, buttonSize.height/2)
+    --button:getExtendNode2():setPosition(buttonSize.width/2, buttonSize.height/2)
 
     -- 判断是否带字符串显示·
     if params.text then
@@ -84,7 +84,8 @@ function ui.newButton(params)
         })
         titleLabel:setAnchorPoint(cc.p(0.5, 0.5))
 
-        button:getExtendNode2():addChild(titleLabel)
+        --button:getExtendNode2():addChild(titleLabel)
+        button:addChild(titleLabel)
         button.mTitleLabel = titleLabel
     end
 
@@ -92,14 +93,16 @@ function ui.newButton(params)
     if params.titleImage then
         button.titleSprite = ui.newSprite(params.titleImage)
         button.titleSprite:setPosition(buttonSize.width * (titlePosRateX - 0.5), buttonSize.height * (titlePosRateY - 0.5))
-        button:getExtendNode2():addChild(button.titleSprite, 1)
+        --button:getExtendNode2():addChild(button.titleSprite, 1)
+        button:addChild(button.titleSprite, 1)
     end
 
     -- 修改titleImage
     button.setTitleImage = function(target, titleImage)
         if target.titleSprite == nil then
             target.titleSprite = ui.newSprite(titleImage)
-            target:getExtendNode2():addChild(target.titleSprite, 1)
+            --target:getExtendNode2():addChild(target.titleSprite, 1)
+            target:addChild(target.titleSprite, 1)
         else
             target.titleSprite:setTexture(titleImage)
         end
@@ -171,11 +174,11 @@ function ui.newButton(params)
             local beginPos = button.mBeginPos
             local endPos = sender:getTouchEndPosition()
             local distance = math.sqrt(math.pow(endPos.x - beginPos.x, 2) + math.pow(endPos.y - beginPos.y, 2))
-            if distance < (40 * Adapter.MinScale) then
+            if distance < (40) then
                 if not params.clickAudio then
-                    MqAudio.playEffect("button.mp3")
+                    --MqAudio.playEffect("button.mp3")
                 elseif params.clickAudio ~= "" then
-                    MqAudio.playEffect(params.clickAudio)
+                    --MqAudio.playEffect(params.clickAudio)
                 end
 
                 if button.mClickAction then

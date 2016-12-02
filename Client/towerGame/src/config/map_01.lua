@@ -1,4 +1,4 @@
-map_01 = {
+local map_01 = {
 	desc = {
 		time = "出现时间",
 		enemyType = "敌人类型",
@@ -7,12 +7,12 @@ map_01 = {
 	},
 	path = {
 		[1] = {
-			x = {5, 6, 7, 8, 9, 10},
-			y = {5, 5, 5, 5, 5, 5},
+			x = {1, 2, 3, 4, 5, 6, 6, 7},
+			y = {5, 5, 5, 5, 5, 5, 6, 6},
 		},
 	},
-	mapPic = "map_01.png",
-	items = {
+	mapPic = "map/map_01.jpg",
+	enemys = {
 		[1] = {
 			time = 10,
 			enemy = {
@@ -45,3 +45,5 @@ map_01 = {
 		},
 	}
 }
+
+return map_01

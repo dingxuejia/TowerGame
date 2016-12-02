@@ -6,7 +6,7 @@
 -- 消息通知类
 Notification = {
     -- 消息通知保存
-    _notifyTable = {}
+    _notifyTable = {},
     _snotifyTable = {}
 }
 
@@ -110,4 +110,5 @@ end
 function Notification:clean()
     -- 清空所有通知消息
     self._notifyTable = {}
+    self._snotifyTable = {}
 end
