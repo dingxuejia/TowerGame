@@ -358,7 +358,7 @@ end
     Table params:
     {
         image="",               -- 必选参数，sprite的图片
-        anchor=cc.p(x,y),       -- 可选参数，sprite的显示锚点，默认是cc.p(0.5, 0.5)
+        anchorPoint=cc.p(x,y),       -- 可选参数，sprite的显示锚点，默认是cc.p(0.5, 0.5)
         position=cc.p(x,y),     -- 可选参数，sprite的显示位置
         scale=1,                -- 可选参数，sprite的缩放比例，默认是1
     }
@@ -372,8 +372,8 @@ function ui.newSprite(params)
 
     local retSprite = display.newSprite(params.image)
     -- 设置锚点
-    if params.anchor then
-        retSprite:setAnchorPoint(params.anchor)
+    if params.anchorPoint then
+        retSprite:setAnchorPoint(params.anchorPoint)
     end
     -- 设置位置
     if params.position then

@@ -1,5 +1,5 @@
 
-EnemyType = {
+EnemyTypeConfig = {
 	desc = {
 		name = "名称",
 		pic = "图片",

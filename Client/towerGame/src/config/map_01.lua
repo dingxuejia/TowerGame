@@ -3,7 +3,7 @@ local map_01 = {
 		time = "出现时间",
 		enemyType = "敌人类型",
 		enemyNum = "敌人数量",
-		path = "行进路径",
+		enemypath = "行进路径",
 	},
 	path = {
 		[1] = {
@@ -14,34 +14,34 @@ local map_01 = {
 	mapPic = "map/map_01.jpg",
 	enemys = {
 		[1] = {
-			time = 10,
+			time = 3,
 			enemy = {
 				[1] = {
 					enemyType = 1,
 					enemyNum = 10,
+					enemypath = 1,
 				}
 			},
-			path = 1,
 		},
 		[2] = {
-			time = 30,
+			time = 15,
 			enemy = {
 				[1] = {
 					enemyType = 1,
 					enemyNum = 10,
+					enemypath = 1,
 				}
 			},
-			path = 1,
 		},
 		[3] = {
-			time = 60,
+			time = 25,
 			enemy = {
 				[1] = {
 					enemyType = 1,
 					enemyNum = 10,
+					enemypath = 1,
 				}
 			},
-			path = 1,
 		},
 	}
 }

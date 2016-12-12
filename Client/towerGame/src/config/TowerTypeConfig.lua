@@ -1,5 +1,5 @@
 
-TowerType = {
+TowerTypeConfig = {
 	desc = {
 		name = "名称",
 		pic = "图片",

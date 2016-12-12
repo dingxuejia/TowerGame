@@ -2,11 +2,13 @@
 local game = class("game")
 
 function game:ctor()
-	-- 加载必全局变量
+	-- 加载必须全局变量
 	require("config.BaseConfig")
+	require("config.EnemyTypeConfig")
+	require("config.TowerTypeConfig")
 
-	require("common.commonFunc")
 	require("common.Ui")
+	require("common.CommonFunc")
 	require("common.Notification")
 end
 

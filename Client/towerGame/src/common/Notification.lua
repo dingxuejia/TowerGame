@@ -1,7 +1,9 @@
 --[[
     文件名：Notification.lua
     描述：自定义消息分发类，用于控制控件数据的自动更新
--- ]]
+    创建人：dingxuejia
+    创建时间：2016.12.7
+--]]
 
 -- 消息通知类
 Notification = {
